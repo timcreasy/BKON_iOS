@@ -1,21 +1,23 @@
-# Add the BKON Mobile SDK to a new or existing Swift project
+# Integrate the phySDK to a new or existing Swift project
 
 ### Introduction
-The [BKON Mobile SDK](https://www.phy.net/sdk/physical-web-sdk-ios/) is a powerful tool for detecting, and interacting with both iBeacon and Physical Web beacons in a single application.
+The [phySDK](https://www.phy.net/sdk/physical-web-sdk-ios/) is a powerful tool for detecting, and interacting with both iBeacon and Physical Web beacons in a single application.
 
-[BKON](https://bkon.com/) is a company based in Nashville, TN., producing hardware and software for the physical web.
+[BKON Connect](https://bkon.com/) is the leading inbound proximity marketing platform. Based in Nashville, TN, BKON Connect makes hardware and software for the Physical Web.
 
 ### Requirements
 
-iBeacon technology, depends on Core Location, support which was added in iOS 7.  Although Physical Web beaons to not depend on this, if you would like to support both, please target iOS 7 or later with your application.
+iBeacon technology depends on Core Location, support for which was added in iOS 7.  Although Physical Web beacons do not depend on this, if you would like to support both, please target iOS 7 or later with your application.
 
-This guide will not go through the process of setting up an iOS application project using Swift, however this guide can be used on any new or existing Swift project.
+You will need the latest version of [Xcode](https://developer.apple.com/xcode/downloads/).
+
+This guide will not go through the process of setting up an iOS application project using Swift. However, this guide can be used on any new or existing Swift project.
 
 ### Guide
 
-Adding the BKON Mobile SDK to an existing Swift project requires a few simple steps.  Because the BKON Mobile SDK is written in Objective-C, it will require adding a bridging header to your project.
+Adding the phySDK to an existing Swift project requires a few simple steps.  Because the phySDK is written in Objective-C, it will require adding a bridging header to your project.
 
-First, let's add the BKON SDK to our project.  Navigate to File -> Add Files to "PROJ_NAME"... and select the PhySdk.framework file which can be found in your downloaded copy of the BKON Mobile SDK:
+First, let's add the phySDK to our project.  Navigate to File -> Add Files to "PROJ_NAME"... and select the PhySdk.framework file which can be found in your downloaded copy of the phySDK:
 
 ![](http://i.imgur.com/uP6MmbV.png)
 ![](http://i.imgur.com/8exSQxO.png)
@@ -39,10 +41,10 @@ You can ensure that this Objective-C bridging header has been configured in your
 
 ![](http://i.imgur.com/YwZgvC3.png)
 
-With our newly created bridging header, we can import the necessary headers which we would like to expose to our Swift project, in this case, we will be importing PhySdk.h. Open your newly created PROJ_NAME-Bridging-Header.h and add the following:
+With our newly created bridging header, we can import the necessary headers which we would like to expose to our Swift project. In this case, we will be importing PhySdk.h. Open your newly created PROJ_NAME-Bridging-Header.h and add the following:
 
 ![](http://i.imgur.com/fMpWnHV.png)
 
-That's it! Depending on what headers you exposed to Swift, they will now be availble to use in your Swift Project!
+That's it! Depending on what headers you exposed to Swift, they will now be available to use in your Swift Project!
 
 ![](http://i.imgur.com/EJvmWd0.png)
